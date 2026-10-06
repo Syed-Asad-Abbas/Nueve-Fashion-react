@@ -1,0 +1,38 @@
+.catalog-tabs{display:flex;align-items:center;flex-wrap:wrap;gap:16px 24px}
+.catalog-tab{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-size:18px;line-height:1.3;white-space:nowrap;border:1px solid #b8bfca;border-radius:999px;padding:11px 22px;background:#fff;color:var(--ink);transition:background .15s,color .15s}
+.catalog-tab.is-active{background:#252c38;color:#fff;border-color:#252c38}
+.catalog-tabs--audience{gap:24px}.catalog-tabs--audience .catalog-tab{border:0;padding:0;background:none;color:var(--ink)}
+.catalog-tabs--audience .catalog-tab.is-active{font-weight:600;text-decoration:underline;text-underline-offset:7px}
+.catalog-tab__art{width:80px;height:40px;overflow:hidden;border:2px solid #7c8189;border-radius:999px;background:#f0e5e4;flex:none}
+.catalog-tab__art img{width:100%;height:100%;object-fit:contain;object-position:50% 30%}
+.catalog-tabs--audience .catalog-tab:nth-child(2) .catalog-tab__art{background:#eaf3fa}.catalog-tabs--audience .catalog-tab:nth-child(3) .catalog-tab__art{background:#eceef2}
+.featured-products .section-heading{align-items:center;gap:30px}.featured-products .section-heading h2{flex-shrink:0}
+.collection-showcase .section-heading{align-items:end;gap:30px}.collection-showcase .section-heading h2{max-width:440px;flex-shrink:0}
+.product-card__sizes{display:none}.product-card__compare{font-size:.85em;color:#8998af;margin-left:12px}
+.product-card__action svg{width:25px;height:25px}
+.showcase-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,400px);gap:24px}
+.showcase-grid .product-card{position:relative;overflow:hidden;border-radius:20px;background:#eeeded}
+.showcase-grid .product-card:first-child{grid-row:1/3}
+.showcase-grid .product-card__image{height:100%;width:100%;aspect-ratio:auto;border-radius:0}
+.showcase-grid .product-card__image img{object-fit:cover}.showcase-grid .product-card:nth-child(2) .product-card__image img{object-position:50% 25%}
+.showcase-grid .product-card__info{position:absolute;inset:auto 0 0;display:block;padding:70px 34px 34px;background:linear-gradient(transparent,#ddd 78%);pointer-events:none}
+.showcase-grid .product-card__info a{pointer-events:auto}.showcase-grid .product-card h3{font-size:25px;text-transform:uppercase;max-width:100%;margin-bottom:14px}
+.showcase-grid .product-card p{font-size:25px;font-weight:500}
+.product-card__showcase-link{display:none}.showcase-grid .product-card__showcase-link{display:flex;align-items:center;justify-content:center;position:absolute;top:18px;right:18px;width:52px;height:52px;border-radius:12px;background:#fff;color:#242424;font-size:32px;z-index:1}
+.showcase-grid .product-card__action{display:none}
+.showcase-grid .product-card__sizes{position:absolute;bottom:35px;right:28px;display:flex;gap:18px;font-size:22px}
+.showcase-grid .product-card__sizes a{padding:4px;border-bottom:1px solid transparent}.showcase-grid .product-card__sizes a:hover{border-color:currentColor}
+.showcase-grid .product-card__sizes span{opacity:.35}.showcase-grid .product-card__info{padding-bottom:86px}
+.showcase-grid .empty-state{grid-column:1/-1;grid-row:1/-1;margin:0;align-content:center}
+[data-catalog-panel][aria-busy=true] [data-catalog-results]{opacity:.55}
+.collection-page>.catalog-tabs{margin-bottom:20px}.collection-controls{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:24px 0;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.collection-controls .sort-form{margin:0}.collection-controls .button{min-height:44px;padding:10px 20px}.collection-clear{text-decoration:underline;text-underline-offset:4px}
+.collection-facet{position:relative}.collection-facet summary{cursor:pointer;padding:12px 18px;border:1px solid var(--line);border-radius:10px}.collection-facet__options{position:absolute;left:0;top:calc(100% + 8px);z-index:10;display:grid;gap:14px;min-width:240px;max-height:350px;overflow:auto;padding:20px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 8px 24px #0001}
+.collection-facet__options label{display:flex;align-items:center;gap:10px;font-size:14px}.collection-facet__options input[type=number]{width:110px;min-height:36px;border:1px solid var(--line);padding:8px}
+.collection-tag-list{margin-bottom:30px}.collection-tag-list summary{cursor:pointer;font-size:18px}.collection-tag-list>div{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.collection-tag-list a{border:1px solid #cbd1da;border-radius:20px;padding:7px 13px;font-size:14px}.collection-tag-list a[aria-current=true]{background:var(--ink);color:#fff}
+.social-icon{width:21px;height:21px;flex:none}.site-footer__social>a{display:inline-flex;align-items:center;gap:10px}
+.footer-wordmark{gap:24px;letter-spacing:-.075em;align-items:center}.footer-wordmark__symbol{width:30%;height:auto;flex:none}.site-footer h2{font-weight:500}
+.hero__media{clip-path:inset(-150px 0 0 0)}
+body{overflow-x:clip}
+@media(max-width:1200px){.featured-products .section-heading{align-items:start;flex-direction:column}.collection-showcase .section-heading{align-items:start;flex-direction:column}.catalog-tabs{gap:12px}.catalog-tab{font-size:16px;padding:10px 18px}.showcase-grid{grid-template-rows:repeat(2,320px)}}
+@media(max-width:680px){.catalog-tabs{gap:10px;justify-content:start}.catalog-tab{font-size:13px;padding:9px 14px}.catalog-tabs--audience{gap:12px}.catalog-tabs--audience .catalog-tab{gap:6px;font-size:12px}.catalog-tab__art{width:42px;height:27px}.featured-products .section-heading,.collection-showcase .section-heading{gap:22px}.collection-showcase .section-heading h2{max-width:270px}.showcase-grid{display:flex;flex-direction:column}.showcase-grid .product-card{height:350px;flex:none}.showcase-grid .product-card:first-child{height:460px}.showcase-grid .product-card__info{padding:60px 22px 72px}.showcase-grid .product-card h3{font-size:20px}.showcase-grid .product-card p{font-size:21px}.showcase-grid .product-card__sizes{bottom:22px;right:18px;font-size:17px;gap:11px}.collection-controls{gap:14px}.collection-controls .sort-form{flex-wrap:wrap}.collection-controls select{max-width:200px}.collection-facet__options{position:relative;top:0;margin-top:10px}.collection-controls .collection-facet{flex-basis:100%}.showcase-grid .empty-state{min-height:240px}}
